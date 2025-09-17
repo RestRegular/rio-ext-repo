@@ -1,0 +1,12 @@
+import(io="io", prog="prog", t1="./test_dirs/test_file1.rio", t2="./test_dirs/test_file2.rio")
+
+fun main(): void {
+    t1.test()
+    io.sout(t2.test())
+}
+
+prog.entry((*args, **kwargs): void -> {
+    main()
+})
+
+export(main)

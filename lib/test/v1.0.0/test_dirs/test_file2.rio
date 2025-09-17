@@ -1,0 +1,5 @@
+fun test(): str {
+    ret "Hello world from test_file2.rio"
+}
+
+export(test)

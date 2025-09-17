@@ -1,0 +1,7 @@
+import(io="io")
+
+fun test(): void {
+    io.sout("Hello world from test_file1.rio")
+}
+
+export(test)

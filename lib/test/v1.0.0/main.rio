@@ -1,0 +1,9 @@
+import(prog="prog", test="./test.rio")
+
+fun main(): void {
+    test.main()
+}
+
+prog.entry((*args, **kwargs): void -> {
+    main()
+})
