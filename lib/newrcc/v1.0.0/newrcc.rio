@@ -1,0 +1,32 @@
+import(io="io")
+
+var RESET = "\033[0m"
+
+class TextColor: public {
+    var RED: static = "\033[31m",
+        GREEN: static = "\033[32m",
+        YELLOW: static = "\033[33m",
+        BLUE: static = "\033[34m",
+        PURPLE: static = "\033[35m",
+        CYAN: static = "\033[36m",
+        GRAY: static = "\033[90m",
+        WHITE: static = "\033[38m",
+        LIGHT_GRAY: static = "\033[37m",
+        LIGHT_RED: static = "\033[91m",
+        LIGHT_GREEN: static = "\033[92m",
+        LIGHT_YELLOW: static = "\033[93m",
+        LIGHT_BLUE: static = "\033[94m",
+        LIGHT_PURPLE: static = "\033[95m",
+        LIGHT_CYAN: static = "\033[96m",
+        LIGHT_WHITE: static = "\033[97m"
+}
+
+fun ctext(text: str, color: str): str {
+    return color + text + RESET
+}
+
+fun cprint(text: str, color: str = TextColor.WHITE): void {
+    io.sout(ctext(text, color))
+}
+
+export(RESET, TextColor, ctext, cprint)
